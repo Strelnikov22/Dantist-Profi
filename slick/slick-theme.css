@@ -1,0 +1,239 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    -webkit-transform: translate(0, -10%);
+    -ms-transform: translate(0, -10%);
+    transform: translate(0, -10%);
+    z-index: 100;
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: url(../img/info-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .45;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -95px;
+}
+[dir='rtl'] .slick-prev
+{
+    left: auto;
+    right: -95px;
+}
+
+
+.slick-next
+{
+    right: -95px;
+}
+[dir='rtl'] .slick-next
+{
+   display: none;
+    left: -95px;
+}
+
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    
+    
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+background-color: aquamarine;
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+    text-align: center;
+    border: 2px solid #64b5e0;
+    border-radius: 100%;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+    background-color: #64b5e0;
+    border-radius: 100%;
+}
+
+@media (max-width: 997px){
+    .slick-prev{
+        left: 35%;
+        bottom: -53px;
+        top: auto;
+    }
+    .slick-next{
+       right: 35%;
+        top: auto;
+        bottom: -65px;
+    }
+}
+.slick-prev{
+    transform: rotate(180deg);
+}
+@media (max-width: 776px){
+    .slick-prev{
+        left: 25%;
+        bottom: -53px;
+        top: auto;
+    }
+    .slick-next{
+       right: 25%;
+        top: auto;
+        bottom: -65px;
+    }
+}
+@media (max-width: 676px){
+    .slick-prev{
+        left: 15%;
+        bottom: -53px;
+        top: auto;
+    }
+    .slick-next{
+       right: 15%;
+        top: auto;
+        bottom: -65px;
+    }
+}
+@media (max-width: 576px){
+    .slick-prev{
+        left: 0;
+        bottom: -53px;
+        top: auto;
+    }
+    .slick-next{
+       right: 0;
+        top: auto;
+        bottom: -65px;
+    }
+}
